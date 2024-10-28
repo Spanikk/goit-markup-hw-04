@@ -421,6 +421,7 @@ img{
 
 .footer-container{
     display: flex;
+    align-items: baseline
 }
 
 .footer-team-social-link {
@@ -466,6 +467,10 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+
+.footer-container.second-row{
+    margin-right: 120px
 }
 
 .footer-title-icons{
