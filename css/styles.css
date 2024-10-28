@@ -108,6 +108,25 @@ img{
     color: #2e2f42;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-link.current {
+    position: relative;
+}
+
+.header-menu-link.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .header-menu-link:hover,
@@ -131,6 +150,9 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-link:hover,
@@ -140,8 +162,12 @@ img{
 
 .title-section{
     background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ .jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
 }
 
 .title-text{
@@ -170,6 +196,9 @@ img{
     border-radius: 4px;
     display: block;
     margin: 0 auto;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-btn:hover,
@@ -189,6 +218,18 @@ img{
 
 .advantages-item{
     width: calc((100% - 3 * 24px) / 4);
+}
+
+.advantages-icons{
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .advantages-subtitle{
@@ -237,8 +278,34 @@ img{
     border-radius: 0 0 4px 4px;
     padding: 0px 0px 32px 0px;
     width: 264px;
-    height: 380px;
+    height: 428px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.icons{
+    display: flex;
+    gap: 24px;
+    position: relative;
+    margin: 8px 16px 32px 16px;
+}
+
+.team-social-link{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-link:hover,
+.team-social-link:active{
+    background-color: #31d0aa;
 }
 
 .team-subtitle{
@@ -289,6 +356,43 @@ img{
     width: 360px;
     height: 420px;
     width: calc((100% - 2 * 24px) / 3);
+    transition-property: box-shadow, background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.portfolio-item:hover{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+
+}
+
+.portfolio-item:hover .portfolio-cover-text{
+    transform: translateY(0);
+}
+
+.portfolio-cover-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-cover-text{
+    position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 40px 32px 40px 32px;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-subtitle{
@@ -312,6 +416,29 @@ img{
     background-color: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.footer-container{
+    display: flex;
+}
+
+.footer-team-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-team-social-link:hover,
+.footer-team-social-link:active {
+    background-color: #31d0aa;
 }
 
 .footer-logo{
@@ -338,4 +465,20 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+
+.footer-title-icons{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 24px;
+    position: relative;
+    margin: 8px 16px 32px 16px;
 }
